@@ -1,0 +1,133 @@
+:root {
+  --primary-darkCyan: hsl(158, 36%, 37%);
+  --primary-semiDarkCyan: hsl(158, 36%, 20%);
+  --primary-cream: hsl(30, 38%, 92%);
+  --neutral-darkBlue: hsl(212, 21%, 14%);
+  --neutral-darkGrayishBlue: hsl(228, 12%, 48%);
+  --neutral-white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: var(--neutral-darkGrayishBlue);
+  font-weight: 500;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--primary-cream);
+}
+
+.container .wrapper {
+  display: flex;
+  width: 600px;
+  background-color: var(--neutral-white);
+  overflow: hidden;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.container .wrapper .hero {
+  width: 50%;
+}
+
+.container .wrapper .hero img {
+  display: block;
+  width: 100%;
+}
+
+.container .wrapper .content {
+  width: 50%;
+  padding: 30px 35px;
+}
+
+.container .wrapper .content h1 {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 4px;
+}
+
+.container .wrapper .content h2 {
+  font-size: 33px;
+  font-weight: 700;
+  line-height: 35px;
+  margin: 20px 0;
+  color: var(--neutral-darkBlue);
+  font-family: "Fraunces", serif;
+}
+
+.container .wrapper .content p {
+  line-height: 23px;
+}
+
+.container .wrapper .content .price {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 33px 0;
+}
+
+.container .wrapper .content .price .discount {
+  color: var(--primary-darkCyan);
+  font-size: 33px;
+  font-weight: 700;
+  font-family: "Fraunces", serif;
+}
+
+.container .wrapper .content .price .normal {
+  text-decoration: line-through;
+}
+
+.container .wrapper .content button {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  background-color: var(--primary-darkCyan);
+  color: var(--neutral-white);
+  font-weight: 700;
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.container .wrapper .content button:hover {
+  cursor: pointer;
+  background-color: var(--primary-semiDarkCyan);
+}
+
+@media only screen and (max-width: 600px) {
+  .container .wrapper {
+    display: block;
+    margin: 20px 15px;
+    width: 368px;
+  }
+
+  .container .wrapper .hero {
+    width: 100%;
+  }
+
+  .container .wrapper .content {
+    width: 100%;
+  }
+}
